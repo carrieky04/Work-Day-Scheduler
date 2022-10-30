@@ -23,6 +23,7 @@ body {
   
   .description {
     white-space: pre-wrap;
+    border: none;
   }
   
   .time-block {
@@ -33,7 +34,7 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    border-top: 2px solid white;
   }
   
   .hour {
@@ -69,5 +70,10 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
+
+  /* .container {
+    border-style: solid;
+    border-radius: 10px;
+  } */
   
   
