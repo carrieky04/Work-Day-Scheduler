@@ -1,10 +1,11 @@
 var currentDay = $('#currentDay');
-// var container = $('.container');
-// var timeBlock = $('.row');
+var container = $('.container');
+var timeBlock = $('.row');
 var hour = $('.hour');
 var eventArea = $('.description');
-var currentHour = moment().format("hA");
+let currHour = moment().hour();
 var saveBtn = $('.saveBtn');
+
 
 // function renderHour () {
 //     var timeBlocks = [
@@ -34,14 +35,39 @@ function displayDay () {
     console.log(today);
     currentDay.text(today);
 }
-
 displayDay();
 
-function checkHour () {
-    var hourEl = element.getAttribute('data-number');
-    console.log(hourEl)
-}
 
+function checkHour() {
+    // Returns an array of rows with class .row
+    let rowDivs = $(".container").children();
+    rowDivs.each(function () {
+      // Represents a individual div element of the current row
+      let rowHour = $(this).children("div");
+      let rowHourAsInt = parseInt(rowHour.attr("data-hour"));
+  
+      // Represents a individual input element of the current row with
+      // description
+      let rowInput = $(this).children(".description");
+  
+      // Compares the div element that has data-hour attribute to current time
+      if (currHour > rowHourAsInt) {
+        // Adds a new class to the row with class .row
+        $(this).addClass("past");
+        // Adds a new class to the input with class .description
+        rowInput.addClass("past");
+      } else if (currHour < rowHourAsInt) {
+        $(this).addClass("future");
+        rowInput.addClass("future");
+      } else {
+        $(this).addClass("present");
+        rowInput.addClass("present");
+      }
+      console.log(this);
+    });
+  }
+  
+  checkHour();
 
 saveBtn.on("click", function() {
     var userEvent = document.querySelector(".description").value;
