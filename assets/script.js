@@ -7,26 +7,8 @@ let currHour = moment().hour();
 var saveBtn = $('.saveBtn');
 
 
-// function renderHour () {
-//     var timeBlocks = [
-//     '9AM',
-//     '10AM',
-//     '11AM',
-//     '12PM',
-//     '1PM',
-//     '2PM',
-//     '3PM',
-//     '4PM',
-//     '5PM',
-//     ];
 
-// for (var i = 0; i < timeBlocks.length; i++) {
-//     var hourEl = $('<p>');
-//     hourEl.attr("data-hour", timeBlocks[i]);
-//     hourEl.text(timeBlocks[i]);
-//     hour.append(hourEl);
-// }}
-// renderHour();
+
 
 
 
@@ -63,20 +45,46 @@ function checkHour() {
         $(this).addClass("present");
         rowInput.addClass("present");
       }
-      console.log(this);
+    //   console.log(this);
     });
   }
   
   checkHour();
 
-saveBtn.on("click", function() {
-    var userEvent = document.querySelector(".description").value;
-        localStorage.setItem("user-event", userEvent);
-    
-    var storedEvent = localStorage.getItem("user-event", userEvent);
-    console.log(storedEvent);
 
+saveBtn.on("click", function () {
+  var userEvent = document.querySelector(".description").value;
+
+  localStorage.setItem("user-event", userEvent);
+
+  var storedEvent = localStorage.getItem("user-event", userEvent);
+  console.log(storedEvent);
 });
+
+// function saveToStorage(row) {
+//     // Might need to check for empty text box
+//     let rowInputValue = row.children(".description").val();
+//     // Gets the data-hour attribute value of the current row
+//     let rowHour = row.children("div").attr("data-hour");
+//     // The data-hour attribute is used to tie the localstorage to that particular time slot
+//     localStorage.setItem(rowHour, rowInputValue);
+//   }
+
+// saveBtn.on("click", function() {
+//     let rowDivs = $(".container").children();
+//     rowDivs.each(function () {
+//       // Represents a individual div element of the current row
+//       let rowHour = $(this).children("div");
+//     //   let rowHourAsInt = parseInt(rowHour.attr("data-hour"));
+  
+//       // Represents a individual input element of the current row with
+//       // description
+//       let rowInputValue = $(this).children(".description").val();
+//       console.log(rowInputValue);
+
+
+// }
+// )
 
 
 
