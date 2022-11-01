@@ -17,7 +17,7 @@ Please follow this link for the [Work Day Scheduler]
 (https://carrieky04.github.io/Work-Day-Scheduler/)
 
  
-    ![screenshot](./assets/screenshot.png)
+![screenshot](./assets/screenshot.png)
    
 
 ## Credits
