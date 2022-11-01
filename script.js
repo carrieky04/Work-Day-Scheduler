@@ -2,12 +2,8 @@ var currentDay = $('#currentDay');
 var container = $('.container');
 var timeBlock = $('.row');
 var hour = $('.hour');
-var eventArea = $('.description');
 let currentHour = moment().hour();
 var saveBtn = $('.saveBtn');
-
-
-
 
 
 
@@ -45,7 +41,6 @@ function checkHour() {
         $(this).addClass("present");
         addEvent.addClass("present");
       }
-    //   console.log(this);
     });
   }
   
@@ -63,18 +58,6 @@ saveBtn.on("click", function () {
 
 
 
-// saveBtn.on("click", function() {
-//     let rowDivs = $(".container").children();
-//     rowDivs.each(function () {
-      
-//       let rowHour = $(this).children("div");
-    
-//       let rowInputValue = $(this).children(".description").val();
-//       console.log(rowInputValue);
-
-
-// }
-// )
 
 
 

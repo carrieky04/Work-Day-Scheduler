@@ -3,43 +3,31 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+The goal was to create a dynamic 9 hour work day scheduler that a user may add their events during the day and it will be saved. Using moment.js and jquery, I was able to make this application. The day at the header of the page updates to the current time. The hour blocks change color depending on if it's the past, present, or future. There is an add event area in each row with it's own save button. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+No installation required
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Please follow this link for the [Work Day Scheduler]
+(https://carrieky04.github.io/Work-Day-Scheduler/)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+ 
+    ![screenshot](./assets/screenshot.png)
+   
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+I watched these tutorials to further my understanding
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+(https://youtu.be/n80RRNS1k64)
 
-If you followed tutorials, include links to those here as well.
+(https://youtu.be/Thnv77n2e6Q)
+
 
 ## License
 
